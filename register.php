@@ -8,40 +8,40 @@
     <link rel="stylesheet" href="styles/toggle.css"> <!-- new CSS -->
 </head>
 <body>
-
     <!-- Header -->
     <div class="header">
         <a href="index.php"><img src="images/logo.png" alt="Logo"></a>
         <a href="login.php"><button class="signup-btn">Log In</button></a>
     </div>
 
-    <!-- Registration Form -->
-    <div class="register-container">
-        <h2>Create Your Account</h2>
+    <main class="main-content">
+        <!-- Registration Form -->
+        <div class="register-container">
+            <h2>Create Your Account</h2>
 
-        <!-- Toggle Switch -->
-        <div class="role-toggle">
-            <label class="switch">
-                <input type="checkbox" id="roleSwitch">
-                <span class="slider round"></span>
-            </label>
-            <span id="roleText">Registering as Donor</span>
+            <!-- Toggle Switch -->
+            <div class="role-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="roleSwitch">
+                    <span class="slider round"></span>
+                </label>
+                <span id="roleText">Registering as Donor</span>
+            </div>
+
+            <form action="register_handler.php" method="post">
+                <input type="hidden" name="role" id="roleInput" value="donor">
+
+                <input type="text" name="name" placeholder="Full Name / Org Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.php">Log in here</a></p>
         </div>
-
-        <form action="register_handler.php" method="post">
-            <input type="hidden" name="role" id="roleInput" value="donor">
-
-            <input type="text" name="name" placeholder="Full Name / Org Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-
-            <button type="submit">Register</button>
-        </form>
-        <p>Already have an account? <a href="login.php">Log in here</a></p>
-    </div>
-
-    <!-- Optional Footer -->
+    </main>
+    <!-- Footer -->
     <div class="footer">
         <div class="footer-container">
             <div class="footer-left">
